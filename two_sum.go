@@ -17,7 +17,6 @@ func twoSum(nums []int, target int) []int {
         if ok && target-k != k {
             return []int {v[0],val[0]}
         } else if ok && len(val)>1 {
-            fmt.Println("entering else")
             return []int {val[0],val[1]}
         }
     }
