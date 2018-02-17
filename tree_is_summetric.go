@@ -1,3 +1,10 @@
+package main
+
+type TreeNode struct {
+    Val int
+    Left,Right *TreeNode
+}
+
 func isSymmetricHelper(left,right *TreeNode) bool {
     if left==nil && right==nil {
         return true
@@ -12,4 +19,8 @@ func isSymmetric(root *TreeNode) bool {
         return isSymmetricHelper(root.Left,root.Right)
     }
     return true
+}
+
+func main() {
+
 }
