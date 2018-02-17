@@ -16,7 +16,7 @@ func reverseLL(head *Node) *Node {
          pre = head
          head = newHead
      }
-     return head
+     return pre
 }
 
 
