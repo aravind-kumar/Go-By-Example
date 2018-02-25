@@ -1,14 +1,14 @@
 package main
 import "fmt"
 
-func peak(input []int) int {
+func minima(input []int) int {
 
     low,high := 0,len(input)
     for low <= high {
         mid := low + (high-low)/2
-        if mid==0 || input[mid-1]<=input[mid] || mid == high || input[mid+1] <= input[mid] {
+        if mid==0 || input[mid-1]>=input[mid] || mid == high || input[mid+1] >= input[mid] {
             return mid 
-        } else if mid < high && input[mid] >= input[mid-1] { 
+        } else if mid < high && input[mid] <= input[mid-1] { 
             low = mid+1 
         } else {
             high = mid-1 
@@ -34,7 +34,7 @@ func main() {
           }
           size-=1 
       }
-      fmt.Printf("The peak index is %d",peak(input))
+      fmt.Printf("The minima index is %d",peak(input))
    }
  
 
